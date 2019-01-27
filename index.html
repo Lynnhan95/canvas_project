@@ -11,10 +11,34 @@
 <body>
    <canvas id="canvas1" width="300px" height="300px"></canvas>
    <div id="actions" class="actions">
-    <button id="eraser">Eraser</button>
-    <button id="brush">Brush</button>
+       <svg id="brush" class="icon">
+            <use xlink:href="#icon-thin-_write_penc"></use>
+       </svg>
+       <svg id="eraser" x='0' y='4px' class="icon">
+            <use xlink:href="#icon-icon-test"></use>
+       </svg>
+       <svg id="clear" class="clear" x='0' y='4px' class="icon" >
+            <use xlink:href="#icon-delete"></use>
+       </svg>
+       <svg id="save" class="save" x='0' y='4px' class="icon" >
+            <use xlink:href="#icon-download2"></use>
+       </svg>
+    <!-- <button id="eraser">Eraser</button>
+    <button id="brush">Brush</button> -->
    </div>
-  
+   <ol id="colors" class="colors">
+    <li id="black" class="black active"></li>
+    <li id="red" class="red"></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+   </ol>
+   <ol id="sizes" class="sizes">
+    <li id="thin" class="thin"></li>
+    <li id="thick" class="thick"></li>
+    <li id="big" class="super"></li>
+   </ol>
+
+    <script src="//at.alicdn.com/t/font_1033135_x0fsqon9win.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

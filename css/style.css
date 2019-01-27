@@ -28,7 +28,7 @@ time, mark, audio, video {
 }
 
 body {
-
+    overflow: hidden;
 }
 
 article,aside,details,figcaption,figure,
@@ -104,26 +104,100 @@ input, select {
 /* reset above///////////////////////////// */
 
 #canvas1{
-    background: red;
+    background: #fff;
     position: relative;
-}
-
-body{
-    border:1px solid red;
-    overflow: hidden;
 }
 
 .actions{
     position:fixed;
-    bottom:0;
-    left:0;
+    top:0;
+    left:20%;
+  
 }
-.actions > #brush{
-    display: none;
+.actions svg{
+    width: 1.6em;
+    height: 1.6em;
+    margin-right: 38px;
+    transition: all 0.3s;
 }
-.actions.x > #brush{
-    display: inline-block
+.actions svg:nth-child(2){
+    width: 1.85em;
+    height: 1.85em;
+    margin-top:10px;
 }
-.actions.x > #eraser{
-    display: none
+.actions svg:nth-child(3){
+    width: 1.5em;
+    height: 1.5em;
+    margin-top:10px;
+    transform: translateY(-2px)
+}
+
+.actions .active{
+    fill:red;
+    transition: all 0.3s;
+    transform:scale(1.2)
+}
+ol{
+    list-style: none;
+}
+.colors{
+    position:fixed;
+    top:64px;
+    left:12px;
+    /* border:1px solid red; */
+}
+.colors > li{
+    width:20px;
+    height:20px;
+    margin:15px 0;
+    box-shadow:0 0 3px rgba(0,0,0,0.1)
+}
+li.black{
+    border-radius: 50%;
+    background:black;
+}
+li.red{
+    border-radius: 50%;
+    background: red;
+}
+li.green{
+    border-radius: 50%;
+    background:green;
+}
+li.blue{
+    border-radius: 50%;
+    background:blue;
+}
+.colors > li.active{
+    box-shadow:0 0 3px rgba(0,0,0,1);
+    transform:scale(1.2)
+}
+.sizes{
+    position:fixed;
+    right:10px;
+    top:64px;
+    margin-top:14px;
+}
+
+.sizes > .thin{
+    height: 0;
+    width: 30px;
+    border-top:2px solid black;
+}
+
+.sizes > .thick{
+    height: 0;
+    width: 30px;
+    border-top:5px solid black;
+    margin-top:24px;
+}
+
+.sizes > .super{
+    height: 0;
+    width: 30px;
+    border-top:8px solid black;
+    margin-top:24px;
+}
+.clear{
+    margin-left:20px;
 }
